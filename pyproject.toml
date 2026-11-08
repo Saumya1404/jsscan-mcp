@@ -1,0 +1,36 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "jsscan-mcp"
+version = "0.1.0"
+description = "MCP server that crawls a web app and scans its JavaScript for leaked secrets and vulnerable libraries"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+dependencies = [
+  "mcp>=1.2,<2",
+  "httpx>=0.27",
+  "starlette>=0.37",
+  "uvicorn>=0.30",
+  "regex>=2023.0",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8", "pytest-asyncio>=0.23"]
+
+[project.scripts]
+jsscan-mcp = "jsscan.server:main"
+jsscan-web = "jsscan.web:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+jsscan = ["data/*.json"]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+asyncio_default_fixture_loop_scope = "function"
+testpaths = ["tests"]

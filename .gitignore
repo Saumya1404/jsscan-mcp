@@ -1,0 +1,19 @@
+__pycache__/
+*.egg-info/
+.venv/
+.pytest_cache/
+fixtures/out/
+*.db
+audit.jsonl
+*.db-wal
+*.db-shm
+*.db-journal
+
+# Local configuration and scanner state
+.env
+.env.*
+!.env.example
+/scope.json
+/.jsscan/
+/recording-data/
+retire-db.json
