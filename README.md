@@ -152,4 +152,4 @@ fixtures/     generator for the vulnerable demo site (credentials created at run
 demo/         scripted agent client and recording script
 ```
 
-See the [recording guide](demo/SCRIPT.md) for the demo walkthrough. <!-- Add the public demo video link here. -->
+<!-- Add the public demo video link here. -->
