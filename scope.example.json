@@ -1,0 +1,3 @@
+{
+  "allowed_hosts": ["localhost:3000", "juice-shop.lab.internal", "*.staging.example.test"]
+}
